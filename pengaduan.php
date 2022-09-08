@@ -1,6 +1,6 @@
         <div class="row">
           <div class="col s12 m9">
-            <h3 class="orange-text">Pengaduan</h3>
+            <h3 class="black-text">Pengaduan</h3>
           </div>
         </div>
 
@@ -19,7 +19,7 @@
             
 	<?php 
 		$no=1;
-		$query = mysqli_query($koneksi,"SELECT * FROM pengaduan INNER JOIN masyarakat ON pengaduan.nik=masyarakat.nik ORDER BY pengaduan.id_pengaduan DESC");
+		$query = mysqli_query($koneksi,"SELECT * FROM pengaduan INNER JOIN masyarakat ON pengaduan.nik=masyarakat.nik WHERE pengaduan.status='proses' ORDER BY pengaduan.id_pengaduan DESC");
 		while ($r=mysqli_fetch_assoc($query)) { ?>
 		<tr>
 			<td><?php echo $no++; ?></td>
@@ -31,7 +31,7 @@
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
         <!-- Modal Structure -->
-        <div id="more?id_pengaduan=<?php echo $r['id_pengaduan'] ?>" class="modal">
+        <div id="more?id_pengaduan =<?php echo $r['id_pengaduan'] ?>" class="modal">
           <div class="modal-content">
             <h4 class="orange-text">Detail</h4>
             <div class="col s12 m6">

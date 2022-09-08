@@ -1,0 +1,13 @@
+admin
+koneksi
+css
+database
+img
+js
+masyarakat
+petugas
+index
+login 
+logout
+
+https://puspenkom-bpsdm.kemenkumham.go.id/#services
